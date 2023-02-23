@@ -1,7 +1,7 @@
 #1.)Describe raster properties
 #Set up the environment
 
-folderPath = r'\\Mac\Home\Documents\GIS\Geography_173\Week_6\LabData\LabData'
+folderPath = r'\\Mac\Home\Documents\GIS\ndvi-raster-data'
 
 import arcpy
 from arcpy import env
@@ -58,7 +58,8 @@ outReclassify.save(os.path.join(folderPath, 'reclassed'))
 
 ##########################################################################                   
 #4.) Prints the values at (349908, 3768856)
-result = arcpy.GetCellValue_management('NDVI.tif',"349908 3768856")
+result = arcpy.GetCellValue_management('NDVI.tif',"349908 3768856")
+
 result2 = arcpy.GetCellValue_management('reclassed', "349908 3768856")
 print 'NDVI Value:',result
 print 'Category:',result2
